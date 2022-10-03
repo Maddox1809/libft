@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 16:04:08 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/27 16:56:38 by ljoiret          ###   ########.fr       */
+/*   Created: 2022/10/03 09:25:54 by ljoiret           #+#    #+#             */
+/*   Updated: 2022/10/03 09:30:18 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-int	ft_strlen(char *str)
+unsigned char	ft_toupper(unsigned char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (c <= 122 && c >= 97)
+		return (c - 32);
+	return (c);
 }

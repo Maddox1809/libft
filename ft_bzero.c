@@ -6,11 +6,13 @@
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 17:25:27 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/07 17:29:13 by ljoiret          ###   ########.fr       */
+/*   Updated: 2022/09/11 11:29:54 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, int n)
 {
 	char	*ptr;
 	int	i;

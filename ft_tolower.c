@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 16:04:08 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/27 16:56:38 by ljoiret          ###   ########.fr       */
+/*   Created: 2022/10/03 09:29:47 by ljoiret           #+#    #+#             */
+/*   Updated: 2022/10/03 09:32:48 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-int	ft_strlen(char *str)
+unsigned char	ft_tolower(unsigned char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (c <= 90 && c >= 65)
+		return (c += 32);
+	return (c);
 }

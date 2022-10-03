@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 16:04:08 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/27 16:56:38 by ljoiret          ###   ########.fr       */
+/*   Created: 2022/09/11 10:27:09 by ljoiret           #+#    #+#             */
+/*   Updated: 2022/10/02 20:39:09 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_strlen(char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+char	*ft_memmove(char *dest, const char *src, int len)
+{
+	char temp[2048];
+
+	ft_memcpy(temp, src, len);
+	ft_memcpy((char *) dest, temp, len);
+	return (dest);
 }

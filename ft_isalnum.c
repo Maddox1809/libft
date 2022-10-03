@@ -6,7 +6,7 @@
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:47:21 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/07 14:54:08 by ljoiret          ###   ########.fr       */
+/*   Updated: 2022/09/11 11:13:57 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	ft_isalnum(int arg)
 	char ch;
 
 	ch = (char) arg;
-	if (ch <= 'Z' && ch >= 'A' || ch <= 'z' && ch >= 'a')
+	if (ch <= 'Z' && ch >= 'A')
+		return (1);
+	else if (ch <= 'z' && ch >= 'a')
 		return (1);
 	else if (ch <= '9' && ch >= '0')
 		return (1);
