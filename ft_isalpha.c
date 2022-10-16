@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	char ch;
+	char	ch;
 
 	ch = (char) c;
 	if (ch <= 'Z' && ch >= 'A')

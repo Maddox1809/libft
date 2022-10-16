@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int	ft_isalnum(int arg)
+int	ft_isalnum(int c)
 {
-	char ch;
+	char	ch;
 
-	ch = (char) arg;
+	ch = (char) c;
 	if (ch <= 'Z' && ch >= 'A')
 		return (1);
 	else if (ch <= 'z' && ch >= 'a')

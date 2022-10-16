@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_isprint(int arg)
-{
-	char	c;
 
-	c = (char) arg;
-	if (c <= 126 && c >= 33)
+int	ft_isprint(int c)
+{
+	char	ch;
+
+	ch = (char) c;
+	if (ch <= 126 && ch >= 32)
 		return (1);
 	return (0);
 }

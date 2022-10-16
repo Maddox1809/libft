@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljoiret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 14:54:39 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/09/27 16:57:07 by ljoiret          ###   ########.fr       */
+/*   Created: 2022/10/04 17:45:35 by ljoiret           #+#    #+#             */
+/*   Updated: 2022/10/04 17:45:37 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	ch;
+	size_t	i;
+	size_t	destsize;
 
-	ch = (char) c;
-	if (ch >= 0 && ch <= 127)
-		return (1);
-	return (0);
+	i = 0;
+	destsize = ft_strlen(dst);
+	while (i < (dstsize - destsize))
+	{
+		dst[destsize + i] = src[i];
+		i++;
+	}
+	if (dstsize != 0 && destsize > dstsize)
+		dst[i] = '\0';
+	return (destsize + ft_strlen(src));
 }
