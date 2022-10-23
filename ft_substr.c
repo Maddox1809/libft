@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljoiret <ljoiret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 12:36:46 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/10/23 10:24:31 by ljoiret          ###   ########.fr       */
+/*   Created: 2022/10/22 18:03:37 by ljoiret           #+#    #+#             */
+/*   Updated: 2022/10/22 20:12:59 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c) //"bonjour\0", s
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
-	int	size;
+	char	*substr;
+	size_t	i;
 
-	size = ft_strlen(s);
-	while (c > 256)
-		c -= 256;
 	i = 0;
-	if ((char) c == 0)
-		return ((char *)(s + size));
-	while (i < size)
+	substr = malloc(len + 1);
+	if (!substr)
+		return (0);
+	if (start > ft_strlen(s))
 	{
-		if (s[size - 1 - i] == (char) c)
-			return ((char *) &s[size - 1 - i]);
+		substr[0] = '\0';
+		return (substr);
+	}
+	while (i < len)
+	{
+		substr[i] = s[start + i];
 		i++;
 	}
-	if (s[size - 1 - i] == (char) c)
-		return ((char *) &s[size - 1 - i]);
-	return (0);
+	substr[i] = '\0';
+	return (substr);
 }

@@ -6,7 +6,7 @@
 /*   By: ljoiret <ljoiret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:21:31 by ljoiret           #+#    #+#             */
-/*   Updated: 2022/10/11 18:18:50 by ljoiret          ###   ########.fr       */
+/*   Updated: 2022/10/22 18:45:35 by ljoiret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,9 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
